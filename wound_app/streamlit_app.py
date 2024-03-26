@@ -6,7 +6,7 @@ import streamlit as st
 processor = ViTImageProcessor.from_pretrained('Hemg/Wound-classification')
 model = ViTForImageClassification.from_pretrained('Hemg/Wound-classification')
 def main():
-   uploaded_file = st.file_uploader("Upload image",type=["png", "jpg", "jpeg"],multiple_files=True )
+   uploaded_file = st.file_uploader("Upload image",type=["png", "jpg", "jpeg"],accept_multiple_files=True )
    for uploaded_file in uploaded_file:
       if uploaded_file is not None:
          bytes_data = uploaded_file.getvalue()
